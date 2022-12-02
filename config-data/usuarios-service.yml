@@ -19,3 +19,8 @@ spring:
     database-platform: org.hibernate.dialect.MySQL8Dialect
   application:
     name: msvc-usuarios
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: debug
