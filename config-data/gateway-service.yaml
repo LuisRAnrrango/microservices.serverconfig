@@ -9,18 +9,18 @@ eureka:
     instance:
       hostname: localhost
 spring:
-  cloud:  
+  cloud:
     gateway:
-      discovery: 
+      discovery:
         locator:
           enabled: true
       routes:
-        - id: usuarios-service
-          uri: lb://user-service
-          preduiicates:
-            - Path=/krugeru/** 
         - id: cursos-service
           uri: lb://cursos-service
-          preduiicates:
-            - Path=/kruger/** 
+          predicates:
+            - Path=/kruger/**
+        - id: usuarios-service
+          uri: lb://usuarios-service
+          predicates:
+            - Path=/krugeru/** 
        
