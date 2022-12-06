@@ -22,5 +22,5 @@ spring:
         - id: usuarios-service
           uri: lb://usuarios-service
           predicates:
-            - Path=/krugeru/** 
+            - Path=/rugger/** 
        
